@@ -4,6 +4,7 @@ jQuery(document).ready(function() {
 	    Background slideshow
 	*/
 	now = new Date(), hour = now.getHours()
+	console.log(now);
 	if(hour < 4) {
 		$('.top-content').backstretch([
 			"https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg" //-1-1
@@ -53,71 +54,72 @@ jQuery(document).ready(function() {
 		$('.top-content').backstretch([
 			"https://i.loli.net/2018/09/20/5ba360497d43d.jpg" //19-21
 			, "https://i.loli.net/2018/09/20/5ba360498c3af.jpg" //21-23
-			,"https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg" //-1-1
+			, "https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg" //-1-1
 		], {
 			duration: 3000,
 			fade: 750
 		});
 	}
-}
 
-$('#top-navbar-1').on('shown.bs.collapse', function() {
-	$('.top-content').backstretch("resize");
-}); $('#top-navbar-1').on('hidden.bs.collapse', function() {
-	$('.top-content').backstretch("resize");
-});
-
-/*
-    Wow
-*/
-new WOW().init();
-
-/*
-	    Countdown initializer
-	*/
-var now = new Date();
-// var countTo = 25 * 24 * 60 * 60 * 1000 + now.valueOf(); 
-var countTo = 22 * 24 * 60 * 60 * 1000 + now.valueOf(); siteTime();
-//	$('.timer').countdown(countTo, function(event) {
-//		$(this).find('.days').text(event.offset.totalDays);
-//		$(this).find('.hours').text(event.offset.hours);
-//		$(this).find('.minutes').text(event.offset.minutes);
-//		$(this).find('.seconds').text(event.offset.seconds);
-//	});
-
-/*
-    Subscription form
-*/
-$('.subscribe form').submit(function(e) {
-	e.preventDefault();
-	var postdata = $('.subscribe form').serialize();
-	$.ajax({
-		type: 'POST',
-		url: 'assets/subscribe.php',
-		data: postdata,
-		dataType: 'json',
-		success: function(json) {
-			if(json.valid == 0) {
-				$('.success-message').hide();
-				$('.error-message').hide();
-				$('.error-message').html(json.message);
-				$('.error-message').fadeIn('fast', function() {
-					$('.subscribe form').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-						$(this).removeClass('animated shake');
-					});
-				});
-			} else {
-				$('.error-message').hide();
-				$('.success-message').hide();
-				$('.subscribe form').hide();
-				$('.success-message').html(json.message);
-				$('.success-message').fadeIn('fast', function() {
-					$('.top-content').backstretch("resize");
-				});
-			}
-		}
+	$('#top-navbar-1').on('shown.bs.collapse', function() {
+		$('.top-content').backstretch("resize");
 	});
-});
+	$('#top-navbar-1').on('hidden.bs.collapse', function() {
+		$('.top-content').backstretch("resize");
+	});
+
+	/*
+	    Wow
+	*/
+	new WOW().init();
+
+	/*
+		    Countdown initializer
+		*/
+	var now = new Date();
+	// var countTo = 25 * 24 * 60 * 60 * 1000 + now.valueOf(); 
+	var countTo = 22 * 24 * 60 * 60 * 1000 + now.valueOf();
+	siteTime();
+	//	$('.timer').countdown(countTo, function(event) {
+	//		$(this).find('.days').text(event.offset.totalDays);
+	//		$(this).find('.hours').text(event.offset.hours);
+	//		$(this).find('.minutes').text(event.offset.minutes);
+	//		$(this).find('.seconds').text(event.offset.seconds);
+	//	});
+
+	/*
+	    Subscription form
+	*/
+	$('.subscribe form').submit(function(e) {
+		e.preventDefault();
+		var postdata = $('.subscribe form').serialize();
+		$.ajax({
+			type: 'POST',
+			url: 'assets/subscribe.php',
+			data: postdata,
+			dataType: 'json',
+			success: function(json) {
+				if(json.valid == 0) {
+					$('.success-message').hide();
+					$('.error-message').hide();
+					$('.error-message').html(json.message);
+					$('.error-message').fadeIn('fast', function() {
+						$('.subscribe form').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+							$(this).removeClass('animated shake');
+						});
+					});
+				} else {
+					$('.error-message').hide();
+					$('.success-message').hide();
+					$('.subscribe form').hide();
+					$('.success-message').html(json.message);
+					$('.success-message').fadeIn('fast', function() {
+						$('.top-content').backstretch("resize");
+					});
+				}
+			}
+		});
+	});
 
 });
 
