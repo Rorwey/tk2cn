@@ -5,18 +5,18 @@ jQuery(document).ready(function() {
         Background slideshow
     */
 	$('.top-content').backstretch([
-	                     "assets/img/backgrounds/01.jpg"
-	                   , "assets/img/backgrounds/02.jpg"
-	                   , "assets/img/backgrounds/03.jpg"
-	                   , "assets/img/backgrounds/04.jpg"
-	                   , "assets/img/backgrounds/05.jpg"
-	                   , "assets/img/backgrounds/06.jpg"
-	                   , "assets/img/backgrounds/07.jpg"
-	                   , "assets/img/backgrounds/08.jpg"
-	                   , "assets/img/backgrounds/09.jpg"
-	                   , "assets/img/backgrounds/10.jpg"
-	                   , "assets/img/backgrounds/11.jpg"
-	                   , "assets/img/backgrounds/12.jpg"
+	                     "https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba35fd516513.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba35fd4c64ef.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba35fd4e852e.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba35fd4418ef.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba3604946aa2.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba36049b83c3.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba36049e7f7a.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba36049cae2e.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba3604987483.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba360497d43d.jpg"
+	                   , "https://i.loli.net/2018/09/20/5ba360498c3af.jpg"
 	                  ], {duration: 3000, fade: 750});
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
