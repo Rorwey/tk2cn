@@ -6,16 +6,16 @@ jQuery(document).ready(function() {
     */
 	$('.top-content').backstretch([
 	                     "https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba35fd516513.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba35fd4c64ef.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba35fd516513.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba35fd4c64ef.jpg"
 	                   , "https://i.loli.net/2018/09/20/5ba35fd4e852e.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba35fd4418ef.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba3604946aa2.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba36049b83c3.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba35fd4418ef.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba3604946aa2.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba36049b83c3.jpg"
 	                   , "https://i.loli.net/2018/09/20/5ba36049e7f7a.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba36049cae2e.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba3604987483.jpg"
-	                   , "https://i.loli.net/2018/09/20/5ba360497d43d.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba36049cae2e.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba3604987483.jpg"
+//	                   , "https://i.loli.net/2018/09/20/5ba360497d43d.jpg"
 	                   , "https://i.loli.net/2018/09/20/5ba360498c3af.jpg"
 	                  ], {duration: 3000, fade: 750});
     
