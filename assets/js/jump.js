@@ -10,9 +10,10 @@ if(host[0] == "luov" || host[1] == "luov") {
 	var mubiao = "https://xian6ge.cn";
 	flag = 1;
 }
-if(domain == "time.luov.top")
+if(domain == "time.luov.top"){
 	flag = 0;
-end
+}	
+
 console.log(mubiao);
 var other = GetUrlRelativePath();
 console.log(other);
