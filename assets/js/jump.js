@@ -5,10 +5,10 @@ var host=domain.split(".");
 console.log(host);
 var flag=0;
 if(host[0]=="luov"||host[1]=="luov"){
-	var mubiao="https://luov.top/";
+	var mubiao="https://luov.top";
 	flag=1;
 }else if(host[0]=="xian6ge"||host[1]=="xian6ge"){
-	var mubiao="https://xian6ge.cn/";
+	var mubiao="https://xian6ge.cn";
 	flag=1;
 }
 console.log(mubiao);
