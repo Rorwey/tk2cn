@@ -9,7 +9,9 @@ if(host[0] == "luov" || host[1] == "luov") {
 } else if(host[0] == "xian6ge" || host[1] == "xian6ge") {
 	var mubiao = "https://xian6ge.cn";
 	flag = 1;
-}
+}else if(host[0] == "en" && host[1] == "xian6ge") {
+	var mubiao = "https://en.xian6ge.cn";
+	flag = 1;
 if(domain == "time.luov.top"){
 	flag = 0;
 }	
