@@ -3,7 +3,10 @@ console.log(domain);
 var host = domain.split(".");
 console.log(host);
 var flag = 0;
-if(host[0] == "luov" || host[1] == "luov") {
+if(host[0] == "love" || host[1] == "luov") {
+	var mubiao = "https://love.luov.top";
+	flag = 1;
+} else if(host[0] == "luov" || host[1] == "luov") {
 	var mubiao = "https://luov.top";
 	flag = 1;
 } else if(host[0] == "en" && host[1] == "xian6ge") {
