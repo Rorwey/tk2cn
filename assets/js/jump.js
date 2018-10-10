@@ -12,7 +12,7 @@ if(host[0] == "love" || host[1] == "luov") {
 } else if(host[0] == "en" && host[1] == "xian6ge") {
 	var mubiao = "https://en.xian6ge.cn";
 	flag = 1;
-} else if(host[0] == "xian6ge" || host[1] == "xian6ge") {
+} else if(host[0] == "xian6ge") {
 	var mubiao = "https://xian6ge.cn";
 	flag = 1;
 }
