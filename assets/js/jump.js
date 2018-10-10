@@ -15,6 +15,8 @@ if(host[0] == "love" || host[1] == "luov") {
 } else if(host[0] == "xian6ge") {
 	var mubiao = "https://xian6ge.cn";
 	flag = 1;
+}else{
+	var mubiao = "time.luov.top";
 }
 if(domain == "time.luov.top") {
 	flag = 0;
