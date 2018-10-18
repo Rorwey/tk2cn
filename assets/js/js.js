@@ -32,9 +32,10 @@ function siteTime() {
 	var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDay0) * days - diffHours * hours) / minutes);
 	var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDay0) * days - diffHours * hours - diffMinutes * minutes) / seconds);
 	//	document.getElementById("sitetime").innerHTML = " 已运行" + /*diffYears+" 年 "+*/ diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+//	console.log(diffDay0);
 	document.getElementsByClassName("years")[0].innerHTML = diffYears;
 	//	document.getElementsByClassName("mouths")[0].innerHTML = diffMouths;
-	document.getElementsByClassName("days")[0].innerHTML = diffDays;
+	document.getElementsByClassName("days")[0].innerHTML = diffDay0;
 	document.getElementsByClassName("hours")[0].innerHTML = diffHours;
 	document.getElementsByClassName("minutes ")[0].innerHTML = diffMinutes;
 	document.getElementsByClassName("seconds")[0].innerHTML = diffSeconds;
