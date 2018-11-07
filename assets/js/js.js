@@ -32,13 +32,25 @@ function siteTime() {
 	var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDay0) * days - diffHours * hours) / minutes);
 	var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDay0) * days - diffHours * hours - diffMinutes * minutes) / seconds);
 	//	document.getElementById("sitetime").innerHTML = " 已运行" + /*diffYears+" 年 "+*/ diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-//	console.log(diffDay0);
+	//	console.log(diffDay0);
 	document.getElementsByClassName("years")[0].innerHTML = diffYears;
 	//	document.getElementsByClassName("mouths")[0].innerHTML = diffMouths;
 	document.getElementsByClassName("days")[0].innerHTML = diffDay0;
 	document.getElementsByClassName("hours")[0].innerHTML = diffHours;
 	document.getElementsByClassName("minutes ")[0].innerHTML = diffMinutes;
 	document.getElementsByClassName("seconds")[0].innerHTML = diffSeconds;
+
+	lunar = getLunarDate(todayYear, todayMonth, todayDate);
+	todayMonth = completionDate(todayMonth.toString());
+	todayDate = completionDate(todayDate.toString());
+	todayHour = completionDate(todayHour.toString());
+	todayMinute = completionDate(todayMinute.toString());
+	todaySecond = completionDate(todaySecond.toString());
+	if(lunar.isTerm)
+		var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + "&nbsp;&nbsp;" + todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + " " + lunar.IMonthCn + lunar.IDayCn + " " + lunar.Term;
+	else
+		var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + "&nbsp;" + todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + "&nbsp;&nbsp;" + lunar.IMonthCn + lunar.IDayCn;
+	document.getElementsByClassName("li-text")[0].innerHTML = nowTime;
 } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
 
 function getMouthDays(year, mouth) {
@@ -73,4 +85,18 @@ function  GetUrlRelativePath()　　 {　　　　
 		relUrl = relUrl.split("?")[0];　　　　
 	}　　　　
 	return  relUrl;　　
+}
+
+function completionDate(day) {
+	if(day.length == 1) {
+		return '0' + day
+	} else
+		return day
+}
+
+//获取今天的农历日子
+function getLunarDate(year, month, day) {
+	var lunar = calendar.solar2lunar(year, month, day);
+	//	console.log(lunar);
+	return lunar;
 }
