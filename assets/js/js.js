@@ -41,6 +41,7 @@ function siteTime() {
 	document.getElementsByClassName("seconds")[0].innerHTML = diffSeconds;
 
 	lunar = getLunarDate(todayYear, todayMonth, todayDate);
+//	console.log(lunar);
 	todayMonth = completionDate(todayMonth.toString());
 	todayDate = completionDate(todayDate.toString());
 	todayHour = completionDate(todayHour.toString());
@@ -49,7 +50,7 @@ function siteTime() {
 	if(lunar.isTerm)
 		var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + "&nbsp;&nbsp;" + todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + " " + lunar.IMonthCn + lunar.IDayCn + " " + lunar.Term;
 	else
-		var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + "&nbsp;" + todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + "&nbsp;&nbsp;" + lunar.IMonthCn + lunar.IDayCn;
+		var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + "&nbsp;" + todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + "&nbsp;&nbsp;&nbsp;" + lunar.IMonthCn + lunar.IDayCn;
 	document.getElementsByClassName("li-text")[0].innerHTML = nowTime;
 } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
 
