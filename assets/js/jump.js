@@ -4,7 +4,9 @@ var host = domain.split(".");
 console.log(host);
 var flag = 0;
 var mubiao = "https://time.luov.top";
-if (host[0] == "luov") {
+if(host[0]=="time"&&host[1]=="luov"){
+	flag=0;
+}else if (host[0] == "luov") {
 	mubiao = "https://luov.top";
 	flag = 1;
 }else if(host[0] == "xian6ge") {
