@@ -24,6 +24,6 @@ console.log(mubiao);
 var other = GetUrlRelativePath();
 console.log(other);
 console.log(flag)
-if (flag != 0) {
+if (flag >= 0) {
 	window.location.href = mubiao + other;
 }
