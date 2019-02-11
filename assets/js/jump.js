@@ -22,7 +22,7 @@ if(host[0]=="time"&&host[1]=="luov"){
 console.log(mubiao);
 var other = GetUrlRelativePath();
 console.log(other);
-
+console.log(flag)
 if (flag == 1) {
 	window.location.href = mubiao + other;
 }
