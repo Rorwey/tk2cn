@@ -11,10 +11,10 @@ if (host[0] == "luov") {
 	mubiao = "https://xian6ge.cn";
 	flag = 1;
 }else if(host[1]=="luov"){
-	mubiao= "https://"+host[0]+"luov.top";
+	mubiao= "https://"+host[0]+".luov.top";
 	flag=1;
 }else if(host[1]=="xian6ge"){
-	mubiao= "https://"+host[0]+"xian6ge.cn"; 
+	mubiao= "https://"+host[0]+".xian6ge.cn"; 
 }
 
 console.log(mubiao);
