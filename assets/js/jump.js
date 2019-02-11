@@ -17,6 +17,7 @@ if(host[0]=="time"&&host[1]=="luov"){
 	flag=3;
 }else if(host[1]=="xian6ge"){
 	mubiao= "https://"+host[0]+".xian6ge.cn"; 
+	flag=5;
 }
 
 console.log(mubiao);
