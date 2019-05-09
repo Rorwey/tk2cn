@@ -7,54 +7,54 @@ jQuery(document).ready(function() {
 	console.log(now);
 	if(hour < 4) {
 		$('.top-content').backstretch([
-			"https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg" //-1-1
-			, "https://i.loli.net/2018/09/20/5ba35fd516513.jpg" //1-3
-			, "https://i.loli.net/2018/09/20/5ba360498c3af.jpg" //21-23
+			"https://s2.ax1x.com/2019/05/09/EcWAXQ.jpg" //-1-1
+			, "https://s2.ax1x.com/2019/05/09/EcRvmd.jpg" //1-3
+			, "https://s2.ax1x.com/2019/05/09/EcRXOH.jpg" //3-5
 		], {
 			duration: 3000,
 			fade: 750
 		});
 	} else if(hour < 8) {
 		$('.top-content').backstretch([
-			"https://i.loli.net/2018/09/20/5ba35fd4c64ef.jpg" //3-5
-			, "https://i.loli.net/2018/09/20/5ba35fd4e852e.jpg" //5-7
-			, "https://i.loli.net/2018/09/20/5ba35fd4418ef.jpg" //7-9
+			"https://s2.ax1x.com/2019/05/09/EcRXOH.jpg" //3-5
+			, "https://s2.ax1x.com/2019/05/09/EcRHfK.jpg" //5-7
+			, "https://s2.ax1x.com/2019/05/09/EcRTFx.jpg" //7-9
 		], {
 			duration: 3000,
 			fade: 750
 		});
 	} else if(hour < 12) {
 		$('.top-content').backstretch([
-			"https://i.loli.net/2018/09/20/5ba35fd4418ef.jpg" //7-9
-			, "https://i.loli.net/2018/09/20/5ba3604946aa2.jpg" //9-11
-			, "https://i.loli.net/2018/09/20/5ba36049b83c3.jpg" //11-13
+			"https://s2.ax1x.com/2019/05/09/EcRTFx.jpg" //7-9
+			, "https://s2.ax1x.com/2019/05/09/EcR7Y6.jpg" //9-11
+			, "https://s2.ax1x.com/2019/05/09/EcW9tP.jpg" //11-13
 		], {
 			duration: 3000,
 			fade: 750
 		});
 	} else if(hour < 16) {
 		$('.top-content').backstretch([
-			"https://i.loli.net/2018/09/20/5ba36049b83c3.jpg" //11-13
-			, "https://i.loli.net/2018/09/20/5ba36049e7f7a.jpg" //13-15
-			, "https://i.loli.net/2018/09/20/5ba36049cae2e.jpg" //15-17
+			"https://s2.ax1x.com/2019/05/09/EcW9tP.jpg" //11-13
+			, "https://s2.ax1x.com/2019/05/09/EcRLlD.jpg" //13-15
+			, "https://s2.ax1x.com/2019/05/09/EcRqSO.jpg" //15-17
 		], {
 			duration: 3000,
 			fade: 750
 		});
 	} else if(hour < 20) {
 		$('.top-content').backstretch([
-			"https://i.loli.net/2018/09/20/5ba36049cae2e.jpg" //15-17
-			, "https://i.loli.net/2018/09/20/5ba3604987483.jpg" //17-19
-			, "https://i.loli.net/2018/09/20/5ba360497d43d.jpg" //19-21
+			"https://s2.ax1x.com/2019/05/09/EcRqSO.jpg" //15-17
+			, "https://s2.ax1x.com/2019/05/09/EcWip8.jpg" //17-19
+			, "https://s2.ax1x.com/2019/05/09/EcRx0A.jpg" //19-21
 		], {
 			duration: 3000,
 			fade: 750
 		});
 	} else {
 		$('.top-content').backstretch([
-			"https://i.loli.net/2018/09/20/5ba360497d43d.jpg" //19-21
-			, "https://i.loli.net/2018/09/20/5ba360498c3af.jpg" //21-23
-			, "https://i.loli.net/2018/09/20/5ba35fd4c2e3e.jpg" //-1-1
+			"https://s2.ax1x.com/2019/05/09/EcRx0A.jpg" //19-21
+			, "https://s2.ax1x.com/2019/05/09/EcRzTI.jpg" //21-23
+			, "https://s2.ax1x.com/2019/05/09/EcWAXQ.jpg" //-1-1
 		], {
 			duration: 3000,
 			fade: 750
