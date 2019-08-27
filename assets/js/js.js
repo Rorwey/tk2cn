@@ -65,7 +65,7 @@ function siteTime() {
 	else
 		var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + "&nbsp;" + week + "&nbsp;" + todayHour + ":" +
 			todayMinute + ":" +
-			todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + "&nbsp;&nbsp;&nbsp;" + lunar.IMonthCn + lunar.IDayCn +
+			todaySecond + "<br />" + lunar.gzYear + lunar.Animal + "年" + "&nbsp;&nbsp;" + lunar.IMonthCn + lunar.IDayCn +
 			"&nbsp;&nbsp;" + lunarTime;
 	document.getElementsByClassName("li-text")[0].innerHTML = nowTime;
 } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
