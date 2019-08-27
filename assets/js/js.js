@@ -1,7 +1,8 @@
 function siteTime() {
-	var today = new Date(jQuery.ajax({
-		async: false
-	}).getResponseHeader("Date"));
+	// var today = new Date(jQuery.ajax({
+	// 	async: false
+	// }).getResponseHeader("Date"));
+	var today = new Date();
 	window.setTimeout("siteTime()", 1000);
 	var seconds = 1000;
 	var minutes = seconds * 60;
