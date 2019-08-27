@@ -130,12 +130,10 @@ function getLunarTime(hour, minute) {
 		var a = 40;
 		var b = [0, 1];
 	}
-	console.log(b[0]);
 	if (minute < a) {
 		var time = time0[hour] + time1[b[0]];
 	} else {
 		var time = time0[hour] + time1[b[1]];
 	}
-	console.log(time);
 	return time;
 }
