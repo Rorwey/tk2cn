@@ -1,4 +1,7 @@
 function siteTime() {
+	var today = new Date(jQuery.ajax({
+		async: false
+	}).getResponseHeader("Date"));
 	window.setTimeout("siteTime()", 1000);
 	var seconds = 1000;
 	var minutes = seconds * 60;
@@ -6,11 +9,9 @@ function siteTime() {
 	var days = hours * 24;
 	var mouths = days * 30;
 	var years = days * 365;
-	var today = new Date(jQuery.ajax({
-		async: false
-	}).getResponseHeader("Date"));
+
 	// console.log(today);
-	// var today = new Date();
+	// var today = new Date(); 
 	var todayYear = today.getFullYear();
 	var todayMonth = today.getMonth() + 1;
 	var todayDate = today.getDate();
