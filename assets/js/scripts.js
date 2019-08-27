@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
 	/*
 	    Background slideshow
 	*/
-	now = new Date(), hour = now.getHours()
+	now = new Date();hour = now.getHours()
 	console.log(now);
 	if(hour < 4) {
 		$('.top-content').backstretch([
