@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 	console.log(now);
 	var k=Math.ceil(hour/2)%12;
 	$('.top-content').backstretch([
-		imgArr[(k-1+12)%12],imgArr[k],imgArr[(k+1)%12]
+		imgArr[k],imgArr[(k+1)%12],imgArr[(k-1+12)%12]
 	], {
 		duration: 3000,
 		fade: 750
