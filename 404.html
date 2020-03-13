@@ -30,11 +30,12 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-		
+
 		<!-- CNZZ统计代码 -->
 		<script type="text/javascript">
 			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-			document.write(unescape("%3Cspan style='display:none;'  id='cnzz_stat_icon_1274914062'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274914062' type='text/javascript'%3E%3C/script%3E"));
+			document.write(unescape("%3Cspan style='display:none;'  id='cnzz_stat_icon_1274914062'%3E%3C/span%3E%3Cscript src='" +
+				cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274914062' type='text/javascript'%3E%3C/script%3E"));
 		</script>
 		<!-- 百度统计代码 -->
 		<script>
@@ -55,7 +56,24 @@
 
 		<h1>404</h1>
 		<h2>Page not found !</h2>
+		<h2>镜花水月，一片空白</h2>
+		<h4><span id='time'>0</span>秒后<a href="/">返回首页</a></h4>
 
 	</body>
-
+	<script type="text/javascript">
+		//设定倒数秒数
+		var t = 5;
+		//显示倒数秒数
+		function showTime() {
+			t -= 1;
+			document.getElementById('time').innerHTML = t;
+			if (t == 0) {
+				location.href='/';
+			}
+			//每秒执行一次,showTime()
+			setTimeout("showTime()", 1000);
+		}
+		//执行showTime()
+		showTime();
+	</script>
 </html>

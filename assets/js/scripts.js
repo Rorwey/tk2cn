@@ -1,65 +1,30 @@
 jQuery(document).ready(function() {
-
+	var imgArr = ["https://s2.ax1x.com/2019/05/09/EcWAXQ.jpg" //-1-1
+		, "https://s2.ax1x.com/2019/05/09/EcRvmd.jpg" //1-3
+		, "https://s2.ax1x.com/2019/05/09/EcRXOH.jpg" //3-5
+		, "https://s2.ax1x.com/2019/05/09/EcRHfK.jpg" //5-7
+		, "https://s2.ax1x.com/2019/05/09/EcRTFx.jpg" //7-9
+		, "https://s2.ax1x.com/2019/05/09/EcR7Y6.jpg" //9-11
+		, "https://s2.ax1x.com/2019/05/09/EcW9tP.jpg" //11-13
+		, "https://s2.ax1x.com/2019/05/09/EcRLlD.jpg" //13-15
+		, "https://s2.ax1x.com/2019/05/09/EcRqSO.jpg" //15-17
+		, "https://s2.ax1x.com/2019/05/09/EcWip8.jpg" //17-19
+		, "https://s2.ax1x.com/2019/05/09/EcRx0A.jpg" //19-21
+		, "https://s2.ax1x.com/2019/05/09/EcRzTI.jpg" //21-23
+	];
 	/*
 	    Background slideshow
 	*/
-	now = new Date(), hour = now.getHours()
+	var now = new Date();
+	var hour = now.getHours();
 	console.log(now);
-	if(hour < 4) {
-		$('.top-content').backstretch([
-			"https://s2.ax1x.com/2019/05/09/EcWAXQ.jpg" //-1-1
-			, "https://s2.ax1x.com/2019/05/09/EcRvmd.jpg" //1-3
-			, "https://s2.ax1x.com/2019/05/09/EcRXOH.jpg" //3-5
-		], {
-			duration: 3000,
-			fade: 750
-		});
-	} else if(hour < 8) {
-		$('.top-content').backstretch([
-			"https://s2.ax1x.com/2019/05/09/EcRXOH.jpg" //3-5
-			, "https://s2.ax1x.com/2019/05/09/EcRHfK.jpg" //5-7
-			, "https://s2.ax1x.com/2019/05/09/EcRTFx.jpg" //7-9
-		], {
-			duration: 3000,
-			fade: 750
-		});
-	} else if(hour < 12) {
-		$('.top-content').backstretch([
-			"https://s2.ax1x.com/2019/05/09/EcRTFx.jpg" //7-9
-			, "https://s2.ax1x.com/2019/05/09/EcR7Y6.jpg" //9-11
-			, "https://s2.ax1x.com/2019/05/09/EcW9tP.jpg" //11-13
-		], {
-			duration: 3000,
-			fade: 750
-		});
-	} else if(hour < 16) {
-		$('.top-content').backstretch([
-			"https://s2.ax1x.com/2019/05/09/EcW9tP.jpg" //11-13
-			, "https://s2.ax1x.com/2019/05/09/EcRLlD.jpg" //13-15
-			, "https://s2.ax1x.com/2019/05/09/EcRqSO.jpg" //15-17
-		], {
-			duration: 3000,
-			fade: 750
-		});
-	} else if(hour < 20) {
-		$('.top-content').backstretch([
-			"https://s2.ax1x.com/2019/05/09/EcRqSO.jpg" //15-17
-			, "https://s2.ax1x.com/2019/05/09/EcWip8.jpg" //17-19
-			, "https://s2.ax1x.com/2019/05/09/EcRx0A.jpg" //19-21
-		], {
-			duration: 3000,
-			fade: 750
-		});
-	} else {
-		$('.top-content').backstretch([
-			"https://s2.ax1x.com/2019/05/09/EcRx0A.jpg" //19-21
-			, "https://s2.ax1x.com/2019/05/09/EcRzTI.jpg" //21-23
-			, "https://s2.ax1x.com/2019/05/09/EcWAXQ.jpg" //-1-1
-		], {
-			duration: 3000,
-			fade: 750
-		});
-	}
+	var k=Math.ceil(hour/2)%12;
+	$('.top-content').backstretch([
+		imgArr[k],imgArr[(k+1)%12],imgArr[(k-1+12)%12]
+	], {
+		duration: 3000,
+		fade: 750
+	});
 
 	$('#top-navbar-1').on('shown.bs.collapse', function() {
 		$('.top-content').backstretch("resize");
@@ -99,14 +64,16 @@ jQuery(document).ready(function() {
 			data: postdata,
 			dataType: 'json',
 			success: function(json) {
-				if(json.valid == 0) {
+				if (json.valid == 0) {
 					$('.success-message').hide();
 					$('.error-message').hide();
 					$('.error-message').html(json.message);
 					$('.error-message').fadeIn('fast', function() {
-						$('.subscribe form').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-							$(this).removeClass('animated shake');
-						});
+						$('.subscribe form').addClass('animated shake').one(
+							'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+							function() {
+								$(this).removeClass('animated shake');
+							});
 					});
 				} else {
 					$('.error-message').hide();
