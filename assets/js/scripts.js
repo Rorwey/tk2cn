@@ -1,17 +1,19 @@
 jQuery(document).ready(function() {
-	var imgArr = ["https://s2.ax1x.com/2019/05/09/EcWAXQ.jpg" //-1-1
-		, "https://s2.ax1x.com/2019/05/09/EcRvmd.jpg" //1-3
-		, "https://s2.ax1x.com/2019/05/09/EcRXOH.jpg" //3-5
-		, "https://s2.ax1x.com/2019/05/09/EcRHfK.jpg" //5-7
-		, "https://s2.ax1x.com/2019/05/09/EcRTFx.jpg" //7-9
-		, "https://s2.ax1x.com/2019/05/09/EcR7Y6.jpg" //9-11
-		, "https://s2.ax1x.com/2019/05/09/EcW9tP.jpg" //11-13
-		, "https://s2.ax1x.com/2019/05/09/EcRLlD.jpg" //13-15
-		, "https://s2.ax1x.com/2019/05/09/EcRqSO.jpg" //15-17
-		, "https://s2.ax1x.com/2019/05/09/EcWip8.jpg" //17-19
-		, "https://s2.ax1x.com/2019/05/09/EcRx0A.jpg" //19-21
-		, "https://s2.ax1x.com/2019/05/09/EcRzTI.jpg" //21-23
+
+	var imgArr = ["https://s1.ax1x.com/2020/07/20/U4oDk4.jpg" //23-1
+		,"https://s1.ax1x.com/2020/07/20/U4o5Ae.jpg" //1-3
+		,"https://s1.ax1x.com/2020/07/20/U4ow0U.jpg" //3-5
+		,"https://s1.ax1x.com/2020/07/20/U4o07F.jpg" //5-7
+		,"https://s1.ax1x.com/2020/07/20/U4ortJ.jpg" //7-9
+		,"https://s1.ax1x.com/2020/07/20/U4og6x.jpg" //9-11
+		,"https://s1.ax1x.com/2020/07/20/U4oWnK.jpg" //11-13
+		,"https://s1.ax1x.com/2020/07/20/U4oohd.jpg" //13-15
+		,"https://s1.ax1x.com/2020/07/20/U4oItH.jpg" //15-17
+		,"https://s1.ax1x.com/2020/07/20/U4of0O.jpg" //17-19
+		,"https://s1.ax1x.com/2020/07/20/U4oh7D.jpg" //19-21
+		,"https://s1.ax1x.com/2020/07/20/U4o2X6.jpg" //21-23
 	];
+	
 	/*
 	    Background slideshow
 	*/
