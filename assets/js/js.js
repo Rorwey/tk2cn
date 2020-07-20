@@ -144,3 +144,18 @@ function getLunarTime(hour, minute) {
 	}
 	return time;
 }
+// 设置版权时间
+function setCopyYear(){
+	var year0= 2018;
+	var date=new Date();
+	var year=date.getFullYear();
+	var str=year0;
+	if(year>year0){
+		str=year0+"-"+year;
+	}
+	document.getElementById("copyyear").innerHTML=str;
+}
+
+window.onload=function(){
+	setCopyYear();
+}
