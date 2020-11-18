@@ -1,17 +1,27 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
 	
-    .timer .days, .timer .hours, .timer .minutes, .timer .seconds { font-size: 60px; line-height: 70px; }
+    .timer .hours, .timer .minutes, .timer .seconds { font-size: 60px; line-height: 70px; }
+	
+	.countdown .hours,
+	.countdown .minutes,
+	.countdown .seconds { font-size: 30px; line-height: 40px; }
 	
 }
+
 
 @media (min-width: 768px) and (max-width: 991px) {
 	
 	.inner-bg { padding: 100px 0 160px 0; }
 	
-    .timer .days, .timer .hours, .timer .minutes, .timer .seconds { font-size: 46px; line-height: 60px; }
+    .timer .mouths, .timer .days, .timer .hours, .timer .minutes, .timer .seconds { font-size: 46px; line-height: 60px; }
+	
+	.countdown .hours,
+	.countdown .minutes,
+	.countdown .seconds { font-size: 25px; line-height: 30px; }
 
 }
+
 
 @media (max-width: 767px) {
 	
@@ -28,7 +38,11 @@
 	.top-content .text { padding-top: 0; padding-bottom: 60px; }
 	.subscribe input.subscribe-email, .subscribe button { width: 100%; }
 	
-    .timer .days, .timer .hours, .timer .minutes, .timer .seconds { font-size: 46px; line-height: 60px; }
+	
+	.countdown .hours,
+	.countdown .minutes,
+	.countdown .seconds { font-size: 25px; line-height: 30px; }
+    .timer .hours, .timer .minutes, .timer .seconds { font-size: 46px; line-height: 60px; }
 
 }
 
