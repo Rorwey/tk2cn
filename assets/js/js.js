@@ -3,7 +3,7 @@ function siteTime() {
 	// 	async: false
 	// }).getResponseHeader("Date"));
 	var today = new Date();
-	window.setTimeout("siteTime()", 1000);
+	setTimeout("siteTime()", 1000);
 	var seconds = 1000;
 	var minutes = seconds * 60;
 	var hours = minutes * 60;
@@ -70,7 +70,7 @@ function siteTime() {
 	document.getElementsByClassName("dayth")[0].innerHTML = ordinalNumber(dayth);
 	if(dayth==1){
 		document.getElementsByClassName("congratulations")[0].innerHTML = "Happy New Year!";
-	}else (dayth%10==1){
+	}else if(dayth%10==1){
 		document.getElementsByClassName("congratulations")[0].innerHTML = document.getElementsByClassName("myinfo")[0].innerText;
 	}
 	
@@ -89,7 +89,7 @@ function siteTime() {
 	document.getElementsByClassName("hours")[0].innerHTML = todayHour;
 	document.getElementsByClassName("minutes")[0].innerHTML = todayMinute;
 	document.getElementsByClassName("seconds")[0].innerHTML = todaySecond;
-
+	checkFlash();
 } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
 
 function getMouthDays(year, mouth) {
@@ -228,8 +228,26 @@ function getMinList(){
 function getRandomNumber(max,min) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+function getSign(){
+	var now = new Date();
+	// console.log(now);
+	var hour = now.getHours();
+	var k=Math.ceil(hour/2)%12;
+	return k;
+}
+
+function checkFlash(){
+	k0=parseInt(document.getElementsByClassName("myinfo")[1].innerText);
+	k1=getSign();
+	if(!isNaN(k0)&&k0!=k1){
+		location.reload();
+	}
+}
 	   
 window.onload = function() {
 	setCopyYear();
 	document.getElementsByClassName("myinfo")[0].innerHTML=getMinList();
+	document.getElementsByClassName("myinfo")[1].innerHTML=getSign();
+	siteTime();
+	// window.
 }

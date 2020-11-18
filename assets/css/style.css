@@ -215,9 +215,9 @@ ul.navbar-nav {
 .countdown .hours,
 .countdown .minutes,
 .countdown .seconds {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 100;
-    line-height: 50px;
+    line-height: 60px;
 }
 
 .timer .t-text,
@@ -277,7 +277,7 @@ ul.navbar-nav {
 }
 
 .title{
-	margin-top: 0px;
+	font-size: 18px;
 }
 
 /***** Footer *****/

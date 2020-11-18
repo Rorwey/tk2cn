@@ -18,9 +18,10 @@ jQuery(document).ready(function() {
 	    Background slideshow
 	*/
 	var now = new Date();
-	var hour = now.getHours();
-	console.log(now);
-	var k=Math.ceil(hour/2)%12;
+	// var hour = now.getHours();
+	// console.log(now);
+	// var k=Math.ceil(hour/2)%12;
+	var k=getSign();
 	$('.top-content').backstretch([
 		imgArr[k],imgArr[(k+1)%12],imgArr[(k-1+12)%12]
 	], {

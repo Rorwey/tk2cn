@@ -5,7 +5,7 @@
 	
 	.countdown .hours,
 	.countdown .minutes,
-	.countdown .seconds { font-size: 30px; line-height: 40px; }
+	.countdown .seconds { font-size: 40px; line-height: 50px; }
 	
 }
 
@@ -18,7 +18,7 @@
 	
 	.countdown .hours,
 	.countdown .minutes,
-	.countdown .seconds { font-size: 25px; line-height: 30px; }
+	.countdown .seconds { font-size: 30px; line-height: 40px; }
 
 }
 
@@ -41,7 +41,7 @@
 	
 	.countdown .hours,
 	.countdown .minutes,
-	.countdown .seconds { font-size: 25px; line-height: 30px; }
+	.countdown .seconds { font-size: 30px; line-height: 40px; }
     .timer .hours, .timer .minutes, .timer .seconds { font-size: 46px; line-height: 60px; }
 
 }
