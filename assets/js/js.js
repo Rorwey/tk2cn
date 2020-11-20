@@ -77,7 +77,7 @@ function siteTime() {
 	var lunarInfo=", 农历"+lunar.gzYear + lunar.Animal + "年" + lunar.IMonthCn + lunar.IDayCn + lunarTerm ;
 	var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + placeholder + week + placeholder +
 		todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + nowLunar;
-	document.getElementsByClassName("li-text")[0].innerHTML = nowTime;
+	// document.getElementsByClassName("li-text")[0].innerHTML = nowTime;
 	document.getElementById("lunarTime").innerHTML=lunarTime;
 	document.getElementById("lunarInfo").innerHTML=lunarInfo;
 	document.getElementsByClassName("week")[1].innerHTML=getWeek_cn(todayWeek);
