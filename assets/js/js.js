@@ -60,7 +60,7 @@ function siteTime() {
 	if (lunar.isTerm) { //节气lunar.isTerm
 		var placeholder = getSpaces(3);
 		var nowLunar = lunar.gzYear + lunar.Animal + "年" + getSpaces(1) + lunar.IMonthCn + lunar.IDayCn + getSpaces(1) + lunar.Term + lunarTime;
-		var lunarTerm="，节气："+lunar.Term;
+		var lunarTerm="，"+lunar.Term;
 	} else {
 		var placeholder = getSpaces(1);
 		var nowLunar = lunar.gzYear + lunar.Animal + "年" + getSpaces(2) + lunar.IMonthCn + lunar.IDayCn + getSpaces(2) + lunarTime;
@@ -74,7 +74,7 @@ function siteTime() {
 		document.getElementsByClassName("congratulations")[0].innerHTML = document.getElementsByClassName("myinfo")[0].innerText;
 	}
 	
-	var lunarInfo=", 农历"+lunar.gzYear + lunar.Animal + "年" + lunar.IMonthCn + lunar.IDayCn + lunarTerm ;
+	var lunarInfo=lunarTerm+"，"+"农历"+lunar.gzYear + lunar.Animal + "年" + lunar.IMonthCn + lunar.IDayCn ;
 	var nowTime = todayYear + "/" + todayMonth + "/" + todayDate + placeholder + week + placeholder +
 		todayHour + ":" + todayMinute + ":" + todaySecond + "<br />" + nowLunar;
 	// document.getElementsByClassName("li-text")[0].innerHTML = nowTime;
