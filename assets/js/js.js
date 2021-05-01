@@ -262,9 +262,18 @@ function sendPoet(result){
 function printPoet(arr){
 	str=arr[0];
 	console.log(str);
-	for(var i = 1; i < arr.length; i++) {
-		str=str+'<br/>'+arr[i];
-	}
+	var lent=arr.length;
+	if(lent>6){
+		for(var i = 1; i < lent; i++) {
+			str=str+arr[i];
+			if(i%3==1){
+				str=str+'<br/>';
+			}
+		}}
+	else{
+		for(var i = 1; i < lent; i++) {
+			str=str+'<br/>'+arr[i];
+		}}
 	return str;	
 }
 
