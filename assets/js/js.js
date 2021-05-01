@@ -244,16 +244,7 @@ function checkFlash(){
 	}
 }
 
-
-
-function printPoet(arr){
-	str=arr[0];
-	for(var i = 1; i < arr.length; i++) {
-		str=str+'<br/>'+arr[i];
-	}
-	return str;
-}
-jinrishici.load(function(result) {
+function sendPoet(result){
 	console.log(result);
 	var content = document.querySelector("#content");
 	var title = document.querySelector("#pTitle");
@@ -265,13 +256,42 @@ jinrishici.load(function(result) {
 	author.innerHTML="【" + result.data.origin.dynasty + "】" + result.data.origin.author;
 	mian.innerHTML=printPoet(result.data.origin.content);
 	translate.innerHTML=printPoet(result.data.origin.translate);
+}
+
+
+function printPoet(arr){
+	str=arr[0];
+	console.log(str);
+	for(var i = 1; i < arr.length; i++) {
+		str=str+'<br/>'+arr[i];
+	}
+	return str;	
+}
+
+jinrishici.load(function(result) {
+	// console.log(result);
+	var content = document.querySelector("#content");
+	var title = document.querySelector("#pTitle");
+	var author = document.querySelector("#author");
+	var mian = document.querySelector("#mian");
+	var translate = document.querySelector("#translate");
+	content.innerHTML = result.data.content;
+	title.innerHTML="《"+result.data.origin.title+"》";
+	author.innerHTML="【" + result.data.origin.dynasty + "】" + result.data.origin.author;
+	console.log(result.data.origin.content);
+	mainContent=printPoet(result.data.origin.content);
+	console.log(mainContent);
+	mian.innerHTML=mainContent;
+	tran=printPoet(result.data.origin.translate);
+	console.log(tran);
+	translate.innerHTML=tran;
   });
+
 window.onload = function() {
 	setCopyYear();
 	document.getElementsByClassName("myinfo")[0].innerHTML=getMinList();
 	document.getElementsByClassName("myinfo")[1].innerHTML=getSign();
 	siteTime();
-	
 	// sendPoet(result);
 	// window.
 }
