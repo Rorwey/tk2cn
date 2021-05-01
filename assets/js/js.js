@@ -269,11 +269,12 @@ function printPoet(arr){
 }
 
 jinrishici.load(function(result) {
-	// console.log(result);
+	console.log(result);
 	var content = document.querySelector("#content");
 	var title = document.querySelector("#pTitle");
 	var author = document.querySelector("#author");
 	var mian = document.querySelector("#mian");
+	var traninfo = document.querySelector("#tranInfo");
 	var translate = document.querySelector("#translate");
 	content.innerHTML = result.data.content;
 	title.innerHTML="《"+result.data.origin.title+"》";
@@ -282,9 +283,14 @@ jinrishici.load(function(result) {
 	mainContent=printPoet(result.data.origin.content);
 	console.log(mainContent);
 	mian.innerHTML=mainContent;
-	tran=printPoet(result.data.origin.translate);
-	console.log(tran);
-	translate.innerHTML=tran;
+	if(!result.data.origin.translate){
+		traninfo.style.display="none";
+	}else{
+		tran=printPoet(result.data.origin.translate);
+		console.log(tran);
+		translate.innerHTML=tran;
+	}
+	
   });
 
 window.onload = function() {
