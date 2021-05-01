@@ -265,7 +265,7 @@ function printPoet(arr){
 	var lent=arr.length;
 	if(lent>6){
 		for(var i = 1; i < lent; i++) {
-			if(i%3==0){
+			if(i%4==0){
 				str=str+'<br/>';
 			}
 			str=str+arr[i];			
