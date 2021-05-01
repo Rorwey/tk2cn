@@ -245,18 +245,6 @@ function checkFlash(){
 }
 
 
-function sendPoet(result){
-	var content = document.querySelector("#content");
-	var title = document.querySelector("#pTitle");
-	var author = document.querySelector("#author");
-	var mian = document.querySelector("#mian");
-	var translate = document.querySelector("#translate");
-	content.innerHTML = result.data.content;
-	title.innerHTML="《"+result.data.origin.title+"》";
-	author.innerHTML='【' + result.data.origin.dynasty + '】' + result.data.origin.author;
-	mian.innerHTML=result.data.origin.content;
-	translate.innerHTML=result.data.origin.translate;
-}
 
 function printPoet(arr){
 	str=arr[0];
@@ -265,25 +253,25 @@ function printPoet(arr){
 	}
 	return str;
 }
-
+jinrishici.load(function(result) {
+	console.log(result);
+	var content = document.querySelector("#content");
+	var title = document.querySelector("#pTitle");
+	var author = document.querySelector("#author");
+	var mian = document.querySelector("#mian");
+	var translate = document.querySelector("#translate");
+	content.innerHTML = result.data.content;
+	title.innerHTML="《"+result.data.origin.title+"》";
+	author.innerHTML="【" + result.data.origin.dynasty + "】" + result.data.origin.author;
+	mian.innerHTML=printPoet(result.data.origin.content);
+	translate.innerHTML=printPoet(result.data.origin.translate);
+  });
 window.onload = function() {
 	setCopyYear();
 	document.getElementsByClassName("myinfo")[0].innerHTML=getMinList();
 	document.getElementsByClassName("myinfo")[1].innerHTML=getSign();
 	siteTime();
-	jinrishici.load(function(result) {
-		console.log(result);
-		var content = document.querySelector("#content");
-		var title = document.querySelector("#pTitle");
-		var author = document.querySelector("#author");
-		var mian = document.querySelector("#mian");
-		var translate = document.querySelector("#translate");
-		content.innerHTML = result.data.content;
-		title.innerHTML="《"+result.data.origin.title+"》";
-		author.innerHTML="【" + result.data.origin.dynasty + "】" + result.data.origin.author;
-		mian.innerHTML=printPoet(result.data.origin.content);
-		translate.innerHTML=printPoet(result.data.origin.translate);
-	  });
+	
 	// sendPoet(result);
 	// window.
 }
